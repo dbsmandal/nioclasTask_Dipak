@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import QuestionIDs from './QuestionIDs';
 import axios from 'axios';
-import { MathJaxContext, MathJax } from 'better-react-mathjax'
+import { MathJaxContext, MathJax } from 'better-react-mathjax';
+
 
 const Question = (props) => {
     const [currentQuestion, setCurrentQuestin] = useState([]);
@@ -18,7 +19,7 @@ const Question = (props) => {
             })
     }, [props.id])
     return (
-        <div>
+        <div className='question_div'>
             {currentQuestion.map((item, i) => {
                 return (
                     <div key={i}>

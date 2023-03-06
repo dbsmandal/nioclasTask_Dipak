@@ -1,29 +1,30 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import './App.css'
 import Question from "./Components/Question";
 
 function App() {
   const [count, setcount] = useState(0);
+
+ 
   function forward() {
-    setcount(count + 1)
+    setcount(count + 1);
   }
   function backward() {
     setcount(count - 1);
-  } 
-
+    
+  }
   return (
-    <div>
+    <div className='home_screen'>
       <Question id={count} />
       <div className='buttons'>
-        {
-          count <= 0 ? <button className='button' onClick={backward} disabled >Prev</button> : <button className='button' onClick={backward}>Prev</button>
-        }
-
-        {count >= 2 ? <button className='button' onClick={forward} disabled >Next</button> : <button className='button' onClick={forward}  >Next</button>}
-
-      </div>
+      <button className='btn left' onClick={backward} disabled={count<=0}
+       >Prev</button>
+      <button className='btn right' onClick={forward} disabled={count>=2}
+       >Next</button> 
 
     </div>
+
+    </div >
   );
 }
 
