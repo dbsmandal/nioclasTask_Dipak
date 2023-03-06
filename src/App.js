@@ -1,31 +1,18 @@
-import React, { useState } from "react";
-import './App.css'
-import Question from "./Components/Question";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './Components/Home';
+import Landing from './Components/Landing';
 
-function App() {
-  const [count, setcount] = useState(0);
-
- 
-  function forward() {
-    setcount(count + 1);
-  }
-  function backward() {
-    setcount(count - 1);
-    
-  }
+const App = () => {
   return (
-    <div className='home_screen'>
-      <Question id={count} />
-      <div className='buttons'>
-      <button className='btn left' onClick={backward} disabled={count<=0}
-       >Prev</button>
-      <button className='btn right' onClick={forward} disabled={count>=2}
-       >Next</button> 
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Landing/>}/>
+      <Route path='/home' element={<Home/>}/>
 
-    </div>
-
-    </div >
-  );
+    </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

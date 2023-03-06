@@ -25,8 +25,8 @@ const Question = (props) => {
                     <div key={i}>
                         <MathJaxContext>
                             <MathJax>
-                                <p> Questions Id is :{item.QuestionID}</p>
-                                <p>Questions:{item.Question}</p>
+                                <p> Questions Id is : {item.QuestionID}</p>
+                                <p>Questions : {item.Question}</p>
                             </MathJax>
                         </MathJaxContext>
                     </div>
