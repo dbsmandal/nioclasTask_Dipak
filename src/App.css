@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,44 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.landing_screen {
+  background-color: aqua;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px gray;
+
 }
+.landing_screen div{
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  margin: 15%;
+  }
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: CORAL;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px #999;
+  }
+  .button:hover {background-color: coral}
+  .button:active {
+  background-color: coral;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+
